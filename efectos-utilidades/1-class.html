@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery UI Draggable - Events</title>
+		<link rel="stylesheet" href="../jquery-ui.min.css">
+		<script src="../external/jquery/jquery.js"></script>
+		<script src="../jquery-ui.min.js"></script>
+		<style>
+			.toggler {
+				width: 500px;
+				height: 200px;
+				position: relative;
+			}
+			#button {
+				padding: .5em 1em;
+				text-decoration: none;
+			}
+			.claseBase {
+				width: 340px;
+				padding: 1em;
+				font-size: 1.2em;
+				border: 1px solid #000;
+				background: #eee;
+				color: #333;
+			}
+			.nuevaClase {
+				text-indent: 40px;
+				letter-spacing: .4em;
+				width: 450px;
+				height: 120px;
+				padding: 30px;
+				margin: 10px;
+				font-size: 1.6em;
+			}
+		</style>
+		<script>
+			// Añadir / eliminar clases a elementos
+			$(function() {
+				$("#button").click(function() {
+					// Timeout opcional ().
+					// Cuidado que luego tiene dos clases al mismo tiempo (Estilos superpuestos)
+					
+					$("#ejemplo1").addClass("nuevaClase", 1000, callback);
+				});
+
+				function callback() {
+					setTimeout(function() {
+						$("#ejemplo1").removeClass("nuevaClase");
+					}, 1500);
+				}
+
+				// Swich cambia una clase por otra...
+
+				$("#buttonSwitch").click(function() {
+					$("#ejemplo1").switchClass("claseBase","nuevaClase", 1000, callbackSwich);
+				});
+
+				function callbackSwich() {
+					setTimeout(function() {
+						$("#ejemplo1").switchClass("nuevaClase","claseBase");
+					}, 1500);
+				}
+
+			});
+		</script>
+	</head>
+	<body>
+
+		<div class="toggler">
+			<div id="ejemplo1" class="claseBase ui-corner-all">
+				Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede.
+			</div>
+		</div>
+
+		<button id="button" class="ui-state-default ui-corner-all">
+			Add + Remove Class
+		</button>
+
+		<button id="buttonSwitch" class="ui-state-default ui-corner-all">
+			Switch Class
+		</button>
+
+	</body>
+</html>

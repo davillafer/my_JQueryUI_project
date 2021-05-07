@@ -1,0 +1,91 @@
+body {
+    background: lightgrey;
+    text-align: center;
+}
+
+section > div {
+    display: inline-block;
+    width: 80%;
+    padding: 1vw;
+}
+
+.exercise {
+    background: white;
+    margin: 4vw;
+    text-align: left;
+    padding: 2vw;
+}
+
+h2 {
+    color: #32d296;
+}
+
+.container {
+    width: auto;
+    display: block;
+}
+
+#counter-container {
+    text-align: center;
+    padding: 5px;
+    background-color: #d8ecf1;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.words-container {
+    background-color: lightgrey;
+    position: center;
+    left: 0;
+    right:0;
+}
+
+.words {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    list-style: none;
+}
+
+.word {
+    background: white;
+    height: 20px;
+    width: 100px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.answer {
+    height: 60px;
+    width: 200px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    margin-left: 5px;
+    border: 3.5px solid #e7e7e7;
+    display: inline-block;
+}
+
+.usado {
+    background: grey;
+}
+
+.carousel-indicators li.active {
+    background: grey;
+}
+
+.word:hover,
+.word:focus {
+    box-shadow: 0.2em 0.2em 0.2em -0.2em #32d296;
+    transform: translateY(-0.2em);
+}
+
+.selected {
+    color: white !important;
+    background: #8A8A8A !important;
+}
+
+#buttons {
+    text-align: center;
+}

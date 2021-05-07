@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Word game</title>
+    <link rel="stylesheet" href="componente_2.css">
+    <link rel="stylesheet" href="jquery-ui.min.css">
+    <script src="external/jquery/jquery.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script src="componente_2.js"></script>
+</head>
+
+<body>
+<header>
+    <h1>Word game</h1>
+</header>
+<hr>
+<section class="exercise">
+    <h2>Transitive verbs</h2>
+    <p>Can you match the transitive verbs with their object? Some verbs are intransitive so can't be matched.</p>
+    <div class="container">
+        <p id="counter-container"><span id="counter">10</span> words remaining</p>
+        <div class="words-container">
+            <ul id="words" class="words">
+            </ul>
+        </div>
+        <div id="answers"></div>
+        <div id="buttons">
+            <button id="next"><span class="ui-icon ui-icon-circle-triangle-e"></span></button>
+        </div>
+    </div>
+    <button id="clear">Reiniciar</button>
+</section>
+</body>
+
+</html>

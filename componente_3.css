@@ -1,0 +1,30 @@
+body {
+    background: lightgrey;
+    text-align: center;
+}
+
+section > div {
+    display: inline-block;
+    width: 80%;
+    padding: 1vw;
+}
+
+.row {
+    margin: 1vw;
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+img {
+    padding: 1vw;
+    width: 150px;
+}
+
+.container {
+    width: fit-content;
+    background-image: url('./images/cartas/background.png');
+    padding: 3vw;
+}

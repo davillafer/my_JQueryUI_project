@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery UI Draggable - Events</title>
+		<link rel="stylesheet" href="../jquery-ui.min.css">
+		<script src="../external/jquery/jquery.js"></script>
+		<script src="../jquery-ui.min.js"></script>
+		<style>
+		    #targetElement {
+		    	background: #F9DD34;
+				height: 300px;
+		    	margin: 5em;
+		    }
+			.positionDiv {
+				position: absolute;
+				width: 75px;
+				height: 75px;
+				background: green;
+				color: #FFFFFF;
+				text-align: center;
+				font-size: 2em;
+			}
+		</style>
+		<script>
+			$(document).ready(function() {
+				$("#position1").position({
+					my : "center",
+					at : "center",
+					of : "#targetElement"
+				});
+
+				$("#position2").position({
+					my : "left top",
+					at : "left top",
+					of : "#targetElement"
+				});
+
+				$("#position3").position({
+					my : "right center",
+					at : "right bottom",
+					of : "#targetElement"
+				});
+
+				$(document).mousemove(function(event) {
+					$("#position4").position({
+						my : "left+3 bottom-3",
+						of : event,
+						collision : "fit"
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="targetElement">
+			<div class="positionDiv" id="position1">
+				1
+			</div>
+			<div class="positionDiv" id="position2">
+				2
+			</div>
+			<div class="positionDiv" id="position3">
+				3
+			</div>
+			<div class="positionDiv" id="position4">
+				4
+			</div>
+		</div>
+	</body>
+
+</html>

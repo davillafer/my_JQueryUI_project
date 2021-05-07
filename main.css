@@ -1,0 +1,16 @@
+body {
+     text-align: center;
+     background: lightgrey;
+ }
+
+div {
+    display: inline-block;
+    width: 80%;
+    padding: 5vw;
+}
+
+button {
+    height: 80px;
+    width: 150px;
+    border-radius: 25px;
+}
